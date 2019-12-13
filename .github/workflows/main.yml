@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Zip Release
+      uses: TheDoctor0/zip-release@v0.2.0
+      with:
+        # Filename for archive
+        filename: 'release.zip'
+        # Base path for archive files
+        path: 'A-4E-C'
