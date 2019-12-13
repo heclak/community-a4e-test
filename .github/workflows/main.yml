@@ -14,5 +14,5 @@ jobs:
         # Filename for archive
         filename: 'release.zip'
         # Base path for archive files
-        path: 'A-4E-C/'
+        path: './A-4E-C/'
         exclusions: '*.git'
