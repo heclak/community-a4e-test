@@ -22,7 +22,8 @@ jobs:
           cp README.md Community_A-4E-C_${{ env.RELEASE_VERSION }}/README.md
           cp CHANGELOG.md Community_A-4E-C_${{ env.RELEASE_VERSION }}/CHANGELOG.md
           curl https://docs.google.com/document/d/1Yew1IKZ7HDFZYTtJ2D7unLosBFeCrtcJmlVU0iOzBtQ/export?format=pdf -o "Community_A-4E-C_${{ env.RELEASE_VERSION }}/A-4E Readme.pdf"
-          zip -r "Community_A-4E-C_${{ env.RELEASE_VERSION }}.zip" Community_A-4E-C_${{ env.RELEASE_VERSION }}/*
+          cd Community_A-4E-C_${{ env.RELEASE_VERSION }}
+          zip -r "../Community_A-4E-C_${{ env.RELEASE_VERSION }}.zip" .
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1.0.0
